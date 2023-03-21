@@ -1,0 +1,362 @@
+     /* MAIN/PARENTS */
+     *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body,html{
+        width:100%;
+        height:100%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+    }
+
+    .main{
+        min-height: 100%;
+    }
+
+    .container{
+        width: 100%;
+        min-height: 100%;
+        display:flex;
+    }
+    /*-------*/
+
+    /* Hamburger Button*/
+
+
+    .btn-div{
+        visibility: hidden;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .btn-wrapper{
+        cursor:pointer;
+        position: fixed;
+        top:20px;
+        left: 20px;
+        margin-bottom: 50px;
+    }
+
+    .hamburger-btn{
+        width:40px;
+        height:20px;
+        position: relative;
+    }
+
+    .line{
+        position: absolute;
+        height:5px;
+        width:80%;
+        background:orange;
+        border-radius:8px;
+        transition:all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+    }
+
+    .top{
+        top:0%;
+    }
+
+    .mid{
+        top:49%;
+    }
+
+    .bot{
+        top:98%;
+    }
+
+    .icon.close .top{
+        transform:rotate(45deg);
+        top:48%;
+    }
+
+    .icon.close .mid, .icon.close .bot{
+        transform:rotate(-45deg);
+        top:48%;
+    }
+
+    /**/
+
+    /* LEFT DIV ELEMENTS */
+    .leftdiv{
+        width: 18%;
+        background:#2779E7;
+        position: relative;
+    }
+
+    .leftdiv .navbar-container{
+        position: sticky;
+        top:0;
+        padding-bottom: 50px;
+        color:white;
+    }
+
+    .navbar-container .title{
+        font-size: 2rem;
+        padding: 20px 0 20px 20px;
+        width:80%;
+    }
+
+    ul{
+        margin-top: 50px;
+    }
+
+    ul li{
+        padding:20px 0 20px 20px;
+        font-size: 0.7rem;
+        cursor: pointer;
+    }
+
+    ul li:hover{
+        background: rgba(0,0,0,0.5);
+        border-left: 2px solid white;
+    }
+
+    /*------*/
+
+
+
+
+    /* RIGHT DIV ELEMENTS */
+    .rightdiv{
+        width:82%;
+        background-color: white;
+        z-index: 1;
+    }
+
+    header{
+        position: relative;
+        width: 100%;
+        height: 800px;
+        background-image: url('koronadal-bg.jpg');
+    }
+
+    .header-items-container{
+        color: white;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .header-items-container img{
+        width:90%;
+        max-width: 200px;
+    }
+    
+
+    .header-items-container h1{
+        font-family: 'Dancing Script', cursive;
+        font-size: 80px; 
+        width: 90%;
+        margin: auto;
+        max-width: 600px;       
+    }
+
+    .header-items-container p{
+        width: 90%;
+        margin: auto;
+        max-width: 500px;
+        font-size: 30px;
+        margin-top: 40px;          
+    }
+
+    .header-items-container button{
+        margin-top: 80px;
+        width:90%;
+        max-width: 300px;
+        padding:15px 0 15px 0;
+        color:white;
+        background-color: #2779E7;
+        border: 1px solid #2779E7;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .section1{
+        text-align: center;
+        margin: 100px auto;
+        width: 90%;
+    }
+
+    .section1 p{
+        margin-top: 20px;
+        font-size: 0.6rem;
+    }
+
+    .section2{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:100px auto;
+    }
+
+    .section2 img{
+        width:90%;
+        max-width: 400px;
+    }
+
+    .section2 p{
+        font-size: 0.6rem;
+    }
+
+    .article1{
+        text-align: center;
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .article1 h2{
+        font-size: 1rem;
+    }
+
+    .article1 p{
+        margin-top: 20px;
+        font-size: 0.6rem;
+    }
+
+    .logos{
+        text-align: center;
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .logos img{
+        width:130px;
+        padding: 10px;
+    }
+    /*-----*/
+
+
+    /* FOOTER */
+    footer{
+        width: 100%;
+        background-color: black;
+    }
+
+    footer .container{
+        display: flex;
+        color: white;
+        font-size: 0.55rem;
+        justify-content: center;
+        padding:20px 0 100px 0;
+    }
+
+    footer .contact-number, .social-media, .email{
+        padding:20px 50px 0px 50px;
+    }
+    /*-----*/
+
+
+    
+    
+    @media screen and (max-width:1022px){
+        .leftdiv{
+            display: none;
+        }
+
+        .rightdiv{
+            width: 100%;
+        }
+
+        .btn-div{
+            visibility: visible;
+        }
+
+        .leftdiv.show{
+            text-align: center;
+            display: block;
+            width:100%;
+            height:100%;
+            min-height: 50vh;
+
+        }
+
+        .rightdiv.show{
+            display: none;
+        }
+
+        ul li{
+            padding-left:0;
+            list-style-type: none;
+        }
+
+        .navbar-container .title{
+            padding-left:0;
+            margin: auto;
+        }
+
+        nav{
+            width: 50%;
+            margin: auto;            
+        }
+
+        .section2{
+            display: block;
+            text-align: center;
+        }
+
+        @media screen and (max-width:816px){
+            .header-items-container h1{
+                font-size: 50px;          
+            }
+
+            .header-items-container p{
+                font-size: 20px;      
+            }
+
+            .header-items-container button{
+                font-size: 14px;
+            }
+
+            footer .container{
+                display: block;
+                text-align: center;
+                
+            }
+
+            
+            footer .social-media, .email{
+                padding:50px 0 0 0;
+            }
+
+            @media screen and (max-width:394px){
+                .header-items-container h1{
+                    font-size: 30px;
+                }
+
+                @media screen and (max-width:250px){
+                    .header-items-container h1{
+                        font-size: 20px;
+                    }
+
+                    .header-items-container p{
+                        font-size: 13px;
+                    }
+                    
+
+                    .section1 h1{
+                        font-size: 1rem;
+                    }
+
+                    footer .container{
+                        font-size: 0.4rem;
+                    }
+
+                    .navbar-container .title{
+                        font-size: 1rem;
+                    }
+                    
+                    ul li{
+                        
+                        font-size: 0.5rem;
+                    }
+                }
+            }
+        }
+
+    }
