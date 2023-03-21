@@ -1,0 +1,585 @@
+﻿<Window x:Class="Barangay_Information_Management_System.reportPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barangay_Information_Management_System"
+        mc:Ignorable="d"
+        Title="reportPage" Height="833.588" Width="1760.5" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize">
+    <Grid >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64"></RowDefinition>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Grid Grid.Row="0" Margin="0,-8,0,0" VerticalAlignment="Center" Height="72" Background="#189DEC">
+                <Label Content="Reports" FontSize="21" FontFamily="Tahoma" Margin="10,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="52" Foreground="White" FontWeight="Bold"/>
+            </Grid>
+
+            <Grid x:Name="gridgrid"  Grid.Row="1" AutomationProperties.Name="gridgrid">
+                <Label Content="Reports Category" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="74,65,0,0" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"></Label>
+                <ComboBox Cursor="Hand" x:Name="reports_category_combobox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="212,65,0,0" Width="230" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="reports_category_combobox" SelectionChanged="reports_category_combobox_SelectionChanged">
+                    <ComboBoxItem Content="Purok" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="4Ps" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Agricultural Facility" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Animals/Pet" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Background Gardening" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Blind Drainage" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Breast Feeding" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Dependency" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Direct Waste to Water Bodies" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Family Planning" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Garbage Disposal" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Highest Educational Attainment" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Homelot Status" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="House Status" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="House Type" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Immunization" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="IP" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Mother Tongue" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="NTP" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Philhealth" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="PWD" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Religion" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Sanitary Toilet" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Sex" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Smooking" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Suffix" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Tribe" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="Water Source" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                    <ComboBoxItem Content="WRA" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                </ComboBox>
+
+                <Grid x:Name="fourpsGrid" Margin="74,115,74,10" Visibility="Visible" AutomationProperties.Name="fourpsGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="267">
+                                    <Grid x:Name="scrollViewerFourps" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerAgriculturalFacility">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="fourpsCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="fourpsCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="fourpsCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="fourpsCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="30"></Label>
+                                        <Label x:Name="fourpsYesLabel" Content="0 (0%)" VerticalAlignment="Top" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="fourpsYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" HorizontalAlignment="Left" Width="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="30"></Label>
+                                        <Label x:Name="fourpsNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="fourpsNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="fourpsNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="fourpsNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator VerticalAlignment="Top" Margin="0,267,0,0" Height="25"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="fourpsReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="34,0,324,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="fourpsReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="agriculturalFacilityGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="agriculturalFacilityGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="267">
+                                    <Grid x:Name="scrollViewerAgriculturalFacility" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerAgriculturalFacility">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="agriculturalFacilityCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="agriculturalFacilityCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="agriculturalFacilityCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="agriculturalFacilityCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="30"></Label>
+                                        <Label x:Name="agriculturalFacilityYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="agriculturalFacilityYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="30"></Label>
+                                        <Label x:Name="agriculturalFacilityNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="agriculturalFacilityNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="agriculturalFacilityNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="agriculturalFacilityNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="agriculturalFacilityReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="agriculturalFacilityReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="animalGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="animalGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="267">
+                                    <Grid x:Name="scrollViewerAnimal" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerAnimal">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="animalCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="animalCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="animalCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="animalCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="animalYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="animalYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="animalNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="animalNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="animalNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="animalNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator  Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="animalReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="animalReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="backgroundGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="backgroundGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="267">
+                                    <Grid x:Name="scrollViewerBackground" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerBackground">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="backgroundCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="backgroundCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="backgroundCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="backgroundCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="backgroundYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="backgroundYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="backgroundNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="backgroundNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="backgroundNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="backgroundNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="backgroundReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="backgroundReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="blindDrainageGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="blindDrainageGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="267">
+                                    <Grid x:Name="scrollViewerBlindDrainage" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerBlindDrainage">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="blindDrainageCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="blindDrainageCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="blindDrainageCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="blindDrainageCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="blindDrainageYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="blindDrainageYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="blindDrainageNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="blindDrainageNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="blindDrainageNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="blindDrainageNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="blindDrainageReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="blindDrainageReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="breastFeedingGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="breastFeedingGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="267">
+                                    <Grid x:Name="scrollViewerBreastFeeding" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerBreastFeeding">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="breastFeedingCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="breastFeedingCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="breastFeedingCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="breastFeedingCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="breastFeedingYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="breastFeedingYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="breastFeedingNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="breastFeedingNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="breastFeedingNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="breastFeedingNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="breastFeedingReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="breastFeedingReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="dependencyGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="dependencyGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="220">
+                                    <Grid x:Name="scrollViewerDependency" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerDependency">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="dependencyCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="dependencyCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="dependencyCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="dependencyCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Dependent" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="86"></Label>
+                                        <Label x:Name="dependencyDependentLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="96,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="dependencyDependentLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="Independent" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="86"></Label>
+                                        <Label x:Name="dependencyIndependentLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="96,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="dependencyIndependentLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="dependencyReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="dependencyReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="dwtwbGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="dwtwbGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="263">
+                                    <Grid x:Name="scrollViewerdwtwb" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerdwtwb">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="dwtwbCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="dwtwbCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="dwtwbCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="dwtwbCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="dwtwbYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="dwtwbYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="dwtwbNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="dwtwbNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="dwtwbNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="dwtwbNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="dwtwbReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="dwtwbReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                         </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="familyPlanningGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="familyPlanningGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerFamilyPlanning" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerFamilyPlanning" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="familyPlanningCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="familyPlanningCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="familyPlanningCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="familyPlanningCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="familyPlanningYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="familyPlanningYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="familyPlanningNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="familyPlanningNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="familyPlanningNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="familyPlanningNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="familyPlanningReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="familyPlanningReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="educationGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="educationGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="752" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" VerticalAlignment="Top" Margin="0,0,0,127">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="566">
+                                    <Grid x:Name="scrollViewerGarbageEducation" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerGarbageEducation">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="educationCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="educationCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="educationCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="educationCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Not Attended" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="173"></Label>
+                                        <Label x:Name="educationNotAttendedLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="188,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="educationNotAttendedLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="ALS" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="173"></Label>
+                                        <Label x:Name="educationALSLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="188,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="educationALSLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="Elementary Level" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="173" FontWeight="Bold"></Label>
+                                        <Label x:Name="educationElementaryLevelLabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="educationElementaryLevelLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                        <Label Content="Elementarty Graduate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,242,0,0" FontWeight="Bold" Width="173"></Label>
+                                        <Label x:Name="educationElementaryGraduateLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="188,239,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="educationElementaryGraduateLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="High School Level" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,287,0,0" FontWeight="Bold" Width="173"></Label>
+                                        <Label x:Name="educationHighSchoolLevelLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="188,284,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="educationHighSchoolLevelLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="High School Graduate" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,331,0,0" Width="173" FontWeight="Bold"></Label>
+                                        <Label x:Name="educationHighSchoolGraduateLabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,328,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="educationHighSchoolGraduateLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                        <Label Content="Senior High School Level" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,375,0,0" FontWeight="Bold" Width="173"></Label>
+                                        <Label x:Name="educationSeniorHighSchoolLevelLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="188,372,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="educationSeniorHighSchoolLevelLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="Senior High School Graduate" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,420,0,0" FontWeight="Bold" Width="173"></Label>
+                                        <Label x:Name="educationSeniorHighSchoolGraduateLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="188,417,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="educationSeniorHighSchoolGraduateLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="College Level" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,465,0,0" Width="173" FontWeight="Bold"></Label>
+                                        <Label x:Name="educationCollegeLevelLabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,462,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="educationCollegeLevelLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                        <Label Content="College Graduate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,510,0,0" FontWeight="Bold" Width="173"></Label>
+                                        <Label x:Name="educationCollegeGraduateLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="188,507,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="educationCollegeGraduateLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,97" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,67"/>
+                            <Label x:Name="educationReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="36,0,322,67" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="educationReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="immunizationGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="immunizationGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerImmunization" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerImmunization" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="immunizationCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="immunizationCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="immunizationCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="immunizationCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="immunizationYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="immunizationYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="immunizationNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="immunizationNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="immunizationNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="immunizationNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="immunizationReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="immunizationReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="ipGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="ipGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerIP" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerIP" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="ipCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="ipCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="ipCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="ipCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="ipYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="ipYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="ipNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="ipNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="ipNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="ipNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="ipReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="ipReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="ntpGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="ntpGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerNTP" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerNTP" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="ntpCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="ntpCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="ntpCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="ntpCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="ntpYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="ntpYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="ntpNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="ntpNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="ntpNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="ntpNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="ntpReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="ntpReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="philhealthGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="philhealthGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerPhilhealth" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerPhilhealth" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="philhealthCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="philhealthCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="philhealthCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="philhealthCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="philhealthYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="philhealthYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="philhealthNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="philhealthNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="philhealthNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="philhealthNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="philhealthReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="philhealthReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="pwdGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="pwdGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerPWD" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerPWD" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="pwdCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="pwdCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="pwdCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="pwdCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="pwdYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="pwdYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="pwdNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="pwdNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="pwdNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="pwdNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="pwdReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="pwdReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="sexGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="sexGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,141">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="209">
+                                    <Grid x:Name="scrollViewerSex" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerSex" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="sexCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="sexCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="sexCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="sexCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Male" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="53"></Label>
+                                        <Label x:Name="sexMaleLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="63,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="sexMaleLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="Female" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="53"></Label>
+                                        <Label x:Name="sexFemaleLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="63,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="sexFemaleLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,116" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,93"/>
+                            <Label x:Name="sexReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="36,0,322,93" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="sexReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="smookingGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="smookingGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerSmooking" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerSmooking" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="smookingCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="smookingCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="smookingCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="smookingCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="smookingYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="smookingYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="smookingNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="smookingNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="smookingNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="smookingNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="smookingReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="smookingReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="wraGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="wraGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="350" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="262">
+                                    <Grid x:Name="scrollViewerWRA" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerWRA" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="wraCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="wraCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="wraCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="wraCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="wraYesLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="wraYesLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="No" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="wraNoLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="wraNoLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="N/A" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="wraNALabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="wraNALabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="wraReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="wraReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid x:Name="suffixGrid" Margin="74,115,74,10" Visibility="Hidden" AutomationProperties.Name="suffixGrid">
+                    <Grid >
+                        <Grid Margin="0,-1,0,0" MaxHeight="450" VerticalAlignment="Top">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Visibility="Visible" Margin="0,0,0,75">
+                                <Border BorderThickness="1" BorderBrush="#FF688CAF" Height="362">
+                                    <Grid x:Name="scrollViewerSuffix" Background="#FFD8D0D0" AutomationProperties.Name="scrollViewerSuffix" Margin="0,0,0,0">
+                                        <Label FontSize="15" FontWeight="Bold" Content="Total:" VerticalAlignment="Top" Margin="10,10,822,0"/>
+                                        <Label FontSize="15" x:Name="suffixCountLabel" VerticalAlignment="Top" Margin="55,10,10,0" AutomationProperties.Name="suffixCountLabel"/>
+                                        <Label FontSize="15" FontWeight="Bold" Content="Category:" VerticalAlignment="Top" Margin="10,40,795,0"/>
+                                        <Label FontSize="15" x:Name="suffixCategoryLabel" VerticalAlignment="Top" Margin="86,40,10,0" AutomationProperties.Name="suffixCategoryLabel" Height="30"/>
+                                        <Separator VerticalAlignment="Top" Height="8" Margin="10,75,10,0"/>
+                                        <Label Content="Jr." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="suffixJrLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,107,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="suffixJrLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="Sr." VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,154,0,0" FontWeight="Bold" Width="35"></Label>
+                                        <Label x:Name="suffixSrLabel" Content="0 (0%)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="45,151,0,0" Background="#FF458DA8" Foreground="White" Width="46" AutomationProperties.Name="suffixSrLabel" Height="32" VerticalContentAlignment="Center" MinWidth="46"/>
+                                        <Label Content="I" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,198,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="suffixILabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,195,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="suffixILabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                        <Label Content="II" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,242,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="suffixIILabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,239,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="suffixIILabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                        <Label Content="III" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,288,0,0" Width="35" FontWeight="Bold"></Label>
+                                        <Label x:Name="suffixIIILabel" Content="0 (0%)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,285,0,0" Background="#FF458DA8" Foreground="White" AutomationProperties.Name="suffixIIILabel" Height="32" VerticalContentAlignment="Center" MinWidth="46" Width="46"/>
+                                    </Grid>
+                                </Border>
+                            </ScrollViewer>
+                            <Separator Margin="0,0,0,50" Height="25" VerticalAlignment="Bottom"/>
+                            <Label Content="Note:" HorizontalAlignment="Left" FontStyle="Italic" FontWeight="Bold" Height="37" VerticalAlignment="Bottom" Margin="0,0,0,27"/>
+                            <Label x:Name="suffixReportContent" Content="The Data computations at the table above does not include null records only those household that is not empty" Margin="40,0,318,27" FontStyle="Italic" Height="37" VerticalAlignment="Bottom" AutomationProperties.Name="suffixReportContent" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

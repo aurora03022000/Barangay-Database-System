@@ -1,0 +1,92 @@
+﻿<Window x:Class="Barangay_Information_Management_System.inputsPageModification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barangay_Information_Management_System"
+        mc:Ignorable="d"
+        Title="inputsPageModification" Height="673.162" Width="1242.763" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <Grid Grid.Row="0" VerticalAlignment="Center" Height="75" Background="#189DEC" Margin="0,0,0,3">
+            <Label Content="Modify Inputs" FontSize="18" FontFamily="Tahoma" Margin="10,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="55" Foreground="White" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Label Content="Input Field"  FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="92,63,0,0" Height="30" Width="96"></Label>
+            <ComboBox Cursor="Hand" x:Name="inputCategoryBox" FontSize="13" VerticalAlignment="Top" Height="30" Width="230" HorizontalAlignment="Left" Margin="92,98,0,0" AutomationProperties.Name="inputCategoryBox" SelectionChanged="InputCategoryBox_SelectionChanged" Padding="7,6,5,3" >
+                <ComboBoxItem Content="Garbage Disposal"></ComboBoxItem>
+                <ComboBoxItem Content="Homelot Status"></ComboBoxItem>
+                <ComboBoxItem Content="House Status"></ComboBoxItem>
+                <ComboBoxItem Content="House Type"></ComboBoxItem>
+                <ComboBoxItem Content="Mother Tounge"></ComboBoxItem>
+                <ComboBoxItem Content="Purok"></ComboBoxItem>
+                <ComboBoxItem Content="Religion"></ComboBoxItem>
+                <ComboBoxItem Content="Sanitary Toilet"></ComboBoxItem>
+                <ComboBoxItem Content="Tribe"></ComboBoxItem>
+                <ComboBoxItem Content="Water Source"></ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="value" VerticalAlignment="Top" Height="30" Width="230" HorizontalAlignment="Left" Margin="336,98,0,0" AutomationProperties.Name="value" Padding="7,6,5,3" />
+            <Label Content="Value"  FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="336,63,0,0" Height="30" Width="96"/>
+            <Button x:Name="addvalue" Cursor="Hand" Content="Add Value" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="581,98,0,0" Width="96" AutomationProperties.Name="addvalue" Click="Addvalue_Click"></Button>
+            <Border Margin="62,146,63,41" BorderBrush="#189DEC" BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <DataGrid CanUserResizeColumns="false" ItemsSource="{Binding purokList}" HeadersVisibility="Column" Background="#FFD8D0D0" x:Name="listDataGrid" Padding="0,0,0,10" VerticalGridLinesBrush="#FFD8D0D0" HorizontalGridLinesBrush="#FFD8D0D0" FontSize="15" FontFamily="Tahoma" IsReadOnly="True" CanUserAddRows="False" AutomationProperties.Name="listDataGrid" CanUserResizeRows="False" Visibility="Visible" AutoGenerateColumns="False" HorizontalAlignment="Left" >
+                    <DataGrid.ColumnHeaderStyle >
+                        <Style TargetType="DataGridColumnHeader" >
+                            <Setter Property="Background" Value="#FF458DA8"/>
+                            <Setter Property="BorderBrush" Value="White"></Setter>
+                            <Setter Property="BorderThickness" Value="0, 0, 0, 2"/>
+                            <Setter Property="Margin" Value="0,0,0,10"></Setter>
+                            <Setter Property="FontFamily" Value="Tahoma"></Setter>
+                            <Setter Property="Padding" Value="10,10,10,10"></Setter>
+                            <Setter Property="Foreground" Value="White"></Setter>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Padding" Value="10,0,0,0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                        <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Background" Value="#FFD8D0D0"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Foreground" Value="Black"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Delete" MinWidth="63">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="family_member_delete_btn" Cursor="Hand" AutomationProperties.Name="family_member_delete_btn" Width="45" HorizontalAlignment="Left"  Click="delete_member_btn_Click">
+                                        <DockPanel>
+                                            <Image Source="img/Delete Icon.png" Height="15" Width="15"/>
+                                        </DockPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="List" Width="*" Binding="{Binding name}"  />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

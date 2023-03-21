@@ -1,0 +1,17 @@
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\bin\Debug\Barangay CCT Management System.exe.config
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\bin\Debug\Barangay CCT Management System.exe
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\bin\Debug\Barangay CCT Management System.pdb
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\App.g.cs
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System_MarkupCompile.cache
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System_MarkupCompile.lref
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System.g.resources
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay_CCT_Management_System.Properties.Resources.resources
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System.csproj.GenerateResource.cache
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System.csproj.CoreCompileInputs.cache
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System.exe
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System.pdb
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\Barangay CCT Management System.csprojAssemblyReference.cache
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\loginPage.g.cs
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\loginPage.baml
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\menuPage.g.cs
+E:\Created Applications\Barangay System\Barangay CCT Management System\Barangay CCT Management System\obj\Debug\menuPage.baml

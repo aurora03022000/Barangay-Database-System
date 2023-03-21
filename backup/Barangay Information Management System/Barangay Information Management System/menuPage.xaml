@@ -1,0 +1,213 @@
+﻿<Window x:Class="Barangay_Information_Management_System.menuPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barangay_Information_Management_System"
+        mc:Ignorable="d"
+       Title="menuPage" Height="778" Width="1123" Background="White" Icon="img\Icon.ico" WindowStartupLocation="CenterScreen" MinWidth="1123" MinHeight="648" ResizeMode="CanResizeWithGrip" WindowState="Maximized" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="97"></RowDefinition>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Row Below The Header -->
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175"></ColumnDefinition>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Side Menu -->
+
+            <!-- Contents -->
+            <Grid Grid.Column="1" >
+
+                <!-- Home -->
+                <Grid x:Name="homeGrid" AutomationProperties.Name="homeGrid" Visibility="Visible" Width="961">
+                    <StackPanel  VerticalAlignment="Top" >
+
+                        <Grid Height="730" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-1">
+                            <Grid Margin="-182,92,-187,0" VerticalAlignment="Top" Width="1330" Height="316">
+                                <Label Content="Barangay San Isidro" Foreground="Black" FontFamily="Tahoma" FontSize="40" Margin="27,10,34,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="65" />
+                                <Label Content="San Isidro is a barangay in the city of Koronadal, in the province of South Cotabato."  VerticalAlignment="Top" Margin="443,75,0,0" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Left"/>
+                                <Label Content="Its population as determined by the 2020 Census was 8,421. This represented 4.31% of the total population of Koronadal."  VerticalAlignment="Top" Margin="345,93,0,0" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Left"/>
+                                <Label FontWeight="Bold" Content="Barangay Captain: PB. Lloyd D. Gabutin    Facebook Page: https://www.facebook.com/arangkadaBrgySanIsidro"  VerticalAlignment="Top" Margin="345,124,0,0" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Left"/>
+
+                                <Separator Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Height="34" HorizontalAlignment="Center" Width="724" Margin="296,140,310,142" RenderTransformOrigin="0.5,0.5"/>
+                                <Image Grid.Column="0" Source="img/Banner.png" Stretch="Fill" Margin="587,168,0,0" Height="138" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" />
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <!-- ** -->
+
+                <!-- Transaction -->
+                <Grid x:Name="transactionGrid" AutomationProperties.Name="transactionGrid" Visibility="Hidden">
+                    <StackPanel HorizontalAlignment="Center" Width="1341" VerticalAlignment="Top" Margin="0,-1">
+
+                        <Grid Height="636" VerticalAlignment="Top">
+                            <Label Content="Transactions" Foreground="Black" FontFamily="Tahoma" FontSize="40" Margin="35,68,26,510" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="1280" Background="White" HorizontalAlignment="Center"/>
+                            <Label Content="Transaction page allows user to enter or encode a household information and as well as search for household information and users "  VerticalAlignment="Center" Margin="331,131,315,480" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Center"/>
+                            <Label Content="can able also to delete and update the data by clicking the delete and view button at the left side of the display table" VerticalAlignment="Center" Margin="368,151,361,457" Height="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Center"/>
+                            <Button x:Name="enter_data_btn" BorderBrush="#189DEC" BorderThickness="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="96" Height="84" Margin="569,207,0,345" AutomationProperties.Name="enter_data_btn" Click="enter_data_btn_Click" >
+                                <StackPanel Orientation="Vertical" Height="64" Width="70">
+                                    <Image Source="img/Enter Data.png" Height="46" Margin="0,10,0,0" />
+                                </StackPanel>
+                            </Button>
+                            <Label Content="Enter Data" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="569,291,0,0" FontWeight="Bold" Width="96" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic" Height="30"></Label>
+                            <Button x:Name="search_data_btn" BorderBrush="#189DEC" BorderThickness="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="689,207,0,345" Width="96" Height="84" Click="search_data_btn_Click" AutomationProperties.Name="search_data_btn">
+                                <StackPanel Orientation="Vertical" Height="59" Width="72">
+                                    <Image Source="img/Search Data.png" Height="40" Margin="10,10,10,0" />
+                                </StackPanel>
+                            </Button>
+                            <Label Content="Search Data" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="689,291,0,0" FontWeight="Bold" Width="96" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic"></Label>
+                            <Separator Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="18" Margin="386,184,375,434" Width="580"/>
+
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <!--**-->
+
+                <!-- Reports -->
+                <Grid x:Name="reportsGrid" AutomationProperties.Name="reportsGrid" Visibility="Hidden">
+                    <StackPanel HorizontalAlignment="Center" Width="1341" VerticalAlignment="Top" Margin="0,-1">
+
+                        <Grid Height="636" VerticalAlignment="Top">
+                            <Label Content="Reports" Foreground="Black" FontFamily="Tahoma" FontSize="40" Margin="35,68,26,510" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="1280" Background="White" HorizontalAlignment="Center"/>
+                            <Label Content="Reports page allows user to view or print reports based from the information gathered"  VerticalAlignment="Center" Margin="331,131,315,480" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Center"/>
+                            <Label Content="and this could be useful upon analyzing the data for statistics" VerticalAlignment="Center" Margin="511,147,503,461" Height="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Center"/>
+                            <Button x:Name="reportst_btn" BorderBrush="#189DEC" BorderThickness="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="96" Height="84" Margin="625,207,0,345" AutomationProperties.Name="reportst_btn" Click="Reportst_btn_Click" >
+                                <StackPanel Orientation="Vertical" Height="64" Width="70">
+                                    <Image Source="img/View Report Icon.png" Height="43" Margin="5,10,10,0" />
+                                </StackPanel>
+                            </Button>
+                            <Label Content="View Reports" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="625,291,0,0" FontWeight="Bold" Width="96" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic" Height="30"></Label>
+                            <Separator Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="18" Margin="386,184,375,434" Width="580"/>
+
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <!--**-->
+
+                <!-- Account -->
+                <Grid x:Name="accountGrid" AutomationProperties.Name="transactionGrid" Visibility="Hidden">
+                    <StackPanel HorizontalAlignment="Center" Width="1341" VerticalAlignment="Top" Margin="0,-1">
+
+                        <Grid Height="636" VerticalAlignment="Top">
+                            <Label Content="Account" Foreground="Black" FontFamily="Tahoma" FontSize="40" Margin="35,68,26,510" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="1280" Background="White" HorizontalAlignment="Center"/>
+                            <Label Content="Account page allows user to  manage , register, and view account details and update user account"  VerticalAlignment="Center" Margin="331,131,315,480" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Center"/>
+                            <Label Content="Only admin can manage accounts and the admin have an authority to disable, delete, change password or register accounts " VerticalAlignment="Center" Margin="368,151,314,457" Height="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" HorizontalAlignment="Center" Width="659"/>
+                            <Button x:Name="manage_account_btn" BorderBrush="#189DEC" BorderThickness="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="560,207,0,345" Width="96" Height="84" AutomationProperties.Name="manage_account_btn" Click="Manage_account_btn_Click">
+                                <StackPanel Orientation="Vertical" Height="59" Width="72">
+                                    <Image Source="img/Manage Accounts Icon.png" Height="41" Margin="5,10,0,0" />
+                                </StackPanel>
+                            </Button>
+                            <Label x:Name="manageAccountLabel" Content="Manage Accounts" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="549,291,0,0" FontWeight="Bold" Width="118" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontStyle="Italic" AutomationProperties.Name="manageAccountLabel"></Label>
+
+                            <Button x:Name="register_account_btn" BorderBrush="#189DEC" BorderThickness="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="96" Height="84" Margin="692,207,0,345" AutomationProperties.Name="register_account_btn" Click="Register_account_btn_Click">
+                                <StackPanel Orientation="Vertical" Height="64" Width="70">
+                                    <Image Source="img/Register Icon 1.png" Height="49" Margin="5,10,0,0" />
+                                </StackPanel>
+                            </Button>
+                            <Label x:Name="registerAccountLabel" Content="Register Account" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,291,0,0" FontWeight="Bold" Width="111" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic" Height="30" AutomationProperties.Name="registerAccountLabel"></Label>
+
+                            <Button x:Name="account_details_btn" BorderBrush="#189DEC" BorderThickness="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="96" Height="84" Margin="560,207,0,345" AutomationProperties.Name="account_details_btn" Click="Account_details_btn_Click">
+                                <StackPanel Orientation="Vertical" Height="64" Width="70">
+                                    <Image Source="img/Details Icon.png" Height="41" Margin="5,10,0,0" />
+                                </StackPanel>
+                            </Button>
+                            <Label x:Name="accountDetailsLabel" Content="Account Details" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="556,291,0,0" FontWeight="Bold" Width="104" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic" Height="26" AutomationProperties.Name="accountDetailsLabel"></Label>
+
+                            <Button x:Name="change_password_btn" BorderBrush="#189DEC" BorderThickness="2" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="96" Height="84" Margin="692,207,0,345" AutomationProperties.Name="change_password_btn" Click="Change_password_btn_Click" >
+                                <StackPanel Orientation="Vertical" Height="59" Width="72">
+                                    <Image Source="img/Change Password Icon 2.png" Height="38" Margin="10,10,10,0" />
+                                </StackPanel>
+                            </Button>
+                            <Label x:Name="changePasswordLabel" Content="Change Password" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="684,289,0,0" FontWeight="Bold" Width="111" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic" Height="30" AutomationProperties.Name="changePasswordLabel"></Label>
+
+                            <Separator Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="18" Margin="386,184,375,434" Width="580"/>
+
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <!--**-->
+
+            </Grid>
+            <!-- ** -->
+
+            <Border>
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="20" Color="Black" Opacity="100" ShadowDepth="0" Direction="100" />
+                </Border.Effect>
+
+                <Grid Background="#189DEC" Grid.Column="0"  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="63"></RowDefinition>
+                        <RowDefinition Height="59"></RowDefinition>
+                        <RowDefinition Height="59"></RowDefinition>
+                        <RowDefinition Height="59"></RowDefinition>
+                        <RowDefinition/>
+                        <RowDefinition Height="59"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" FontSize="20" FontFamily="Tahome" Foreground="White" Content="Menu" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Height="46" Margin="41,8,42,9" Width="92" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Button x:Name="transaction_btn1" Grid.Row="1" Cursor="Hand" HorizontalContentAlignment="Left" Margin="0" Padding="10,1,1,1" BorderBrush="Black" BorderThickness="1" AutomationProperties.Name="transaction_btn" HorizontalAlignment="Left" Width="175" Click="Transaction_btn_Click">
+                        <DockPanel>
+                            <Image Source="img/Transaction.png" Height="30" Width="29" />
+                            <TextBlock Text="Transactions" FontSize="15" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+                        </DockPanel>
+                    </Button>
+                    <Button Grid.Row="2" Cursor="Hand" HorizontalContentAlignment="Left" Padding="10,1,1,1" BorderBrush="Black" BorderThickness="1" Click="Button_Click">
+                        <DockPanel>
+                            <Image Source="img/Report.png" Height="30" Width="29" />
+                            <TextBlock Text="Reports" FontSize="15" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+                        </DockPanel>
+                    </Button>
+                    <Button x:Name="account_btn" Grid.Row="3" Cursor="Hand" HorizontalContentAlignment="Left" Padding="10,1,1,1" BorderBrush="Black" BorderThickness="1" AutomationProperties.Name="account_btn" Click="Account_btn_Click">
+                        <DockPanel>
+                            <Image Source="img/Settings.png" Height="30" Width="29" />
+                            <TextBlock Text="Account" FontSize="15" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Width="115" Margin="10,0,0,0" Height="17"></TextBlock>
+                        </DockPanel>
+                    </Button>
+                    <Button x:Name="logout_btn" Grid.Row="5" Cursor="Hand" HorizontalContentAlignment="Left" Padding="10,1,1,1" BorderBrush="Black" BorderThickness="1" AutomationProperties.Name="logout_btn" Click="Logout_btn_Click" >
+                        <DockPanel>
+                            <Image Source="img/Logout.png" Height="30" Width="29" />
+                            <TextBlock Text="Logout" FontSize="15" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Width="115" Margin="10,0,0,0" Height="22"></TextBlock>
+                        </DockPanel>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <!-- ** -->
+
+
+
+        </Grid>
+        <!-- ** -->
+
+        <!-- Header -->
+        <Border Grid.Row="0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="Black" Opacity="100" ShadowDepth="0" Direction="-100" />
+            </Border.Effect>
+
+
+            <Grid Background="#189DEC" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,0">
+                    <Image Source="img/Banner.png" HorizontalAlignment="Left" Width="85" VerticalAlignment="Center" Stretch="Fill" Height="80" />
+                    <Label x:Name="titleLabel" Content="Barangay Information Management System" FontSize="20" Foreground="White" FontFamily="Tahoma" 
+                       AutomationProperties.Name="titleLabel"  Width="455" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+        <!-- ** -->
+
+    </Grid>
+</Window>
+
+<!--  -->

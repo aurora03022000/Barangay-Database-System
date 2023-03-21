@@ -1,0 +1,128 @@
+﻿<Window x:Class="Barangay_Information_Management_System.manageAccountPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barangay_Information_Management_System"
+        mc:Ignorable="d"
+        Title="manageAccountPage" Height="691.917" Width="1089.286" MinWidth="1189.286" ResizeMode="NoResize" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="78"></RowDefinition>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!-- Header -->
+                <Grid Grid.Row="0" VerticalAlignment="Center" Height="75" Background="#189DEC" Margin="0,0,0,3">
+                    <Label Content="Search Data" FontSize="21" FontFamily="Tahoma" Margin="10,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="55" Foreground="White" FontWeight="Bold"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0,0,0,-1">
+                    <Grid>
+                        <Grid>
+                            <Label Content="Search Category" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="54,47,0,0" VerticalAlignment="Top" />
+                            <Label Content="Search" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="306,49,0,0" VerticalAlignment="Top" Height="26" />
+                            <ComboBox Cursor="Hand" x:Name="category_combobox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="54,80,0,0" Width="230" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="category_combobox" SelectionChanged="Category_combobox_SelectionChanged">
+                                <ComboBoxItem Content="Username" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Full Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="First Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Middle Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Last Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Purok" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Phone Number" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+
+                            <TextBox x:Name="search_textbox" Visibility="Visible" BorderBrush="DarkGray" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="230" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="search_textbox" Margin="306,80,0,0"/>
+                            <TextBox x:Name="search_textbox_number" PreviewTextInput="number_textbox" Visibility="Hidden" BorderBrush="DarkGray" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="230" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="search_textbox_number" Margin="306,80,0,0"/>
+                            <Button x:Name="search_btn" VerticalAlignment="Top" Cursor="Hand" HorizontalAlignment="Left" Margin="541,80,0,0" Width="44" Height="30" AutomationProperties.Name="search_btn" Click="Search_btn_Click" >
+                                <DockPanel>
+                                    <Image Source="img/Search Icon.png" Width="20" Height="20"></Image>
+                                </DockPanel>
+                            </Button>
+                        </Grid>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"    Margin="48,132,48,66">
+                            <DataGrid CanUserResizeColumns="false" HeadersVisibility="Column" Background="#FFD8D0D0" x:Name="search_dataGrid" Padding="0,0,0,10" VerticalGridLinesBrush="#FFD8D0D0" HorizontalGridLinesBrush="#FFD8D0D0" FontSize="15" FontFamily="Tahoma" IsReadOnly="True" CanUserAddRows="False" AutomationProperties.Name="search_dataGrid" CanUserResizeRows="False" Visibility="Visible" AutoGenerateColumns="False" HorizontalAlignment="Left" >
+                                <DataGrid.ColumnHeaderStyle >
+                                    <Style TargetType="DataGridColumnHeader" >
+                                        <Setter Property="Background" Value="#FF458DA8"/>
+                                        <Setter Property="BorderBrush" Value="White"></Setter>
+                                        <Setter Property="BorderThickness" Value="0, 0, 0, 2"/>
+                                        <Setter Property="Margin" Value="0,0,0,10"></Setter>
+                                        <Setter Property="FontFamily" Value="Tahoma"></Setter>
+                                        <Setter Property="Padding" Value="10,10,10,10"></Setter>
+                                        <Setter Property="Foreground" Value="White"></Setter>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="Padding" Value="10,0,0,0"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                                    <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="Background" Value="#FFD8D0D0"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Foreground" Value="Black"></Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="Delete" MinWidth="63">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="family_member_delete_btn" Cursor="Hand" Click="delete_member_btn_Click" AutomationProperties.Name="family_member_delete_btn" Width="45" HorizontalAlignment="Left" >
+                                                    <DockPanel>
+                                                        <Image Source="img/Delete Icon.png" Height="15" Width="15"/>
+                                                    </DockPanel>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="View" MinWidth="60">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="family_member_view_btn" Cursor="Hand" AutomationProperties.Name="family_member_view_btn" Width="45" Click="view_member_btn_Click" HorizontalAlignment="Left" >
+                                                    <DockPanel>
+                                                        <Image Source="img/View Icon.png" Height="20" Width="20" />
+                                                    </DockPanel>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Change" MinWidth="60">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="family_member_view_btn" Cursor="Hand" Click="change_password_btn_Click" AutomationProperties.Name="family_member_view_btn" Width="45" HorizontalAlignment="Left" >
+                                                    <DockPanel>
+                                                        <Image Source="img/Change Password Icon.png" Height="20" Width="20" />
+                                                    </DockPanel>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="Username" Width="*" Binding="{Binding username}" />
+                                    <DataGridTextColumn Header="Full Name" MinWidth="260" Binding="{Binding full_name}"  />
+                                    <DataGridTextColumn Header="Barangay" Width="*" Binding="{Binding barangay}"  />
+                                    <DataGridTextColumn Header="Purok" Width="*" Binding="{Binding purok}"  />
+                                    <DataGridTextColumn Header="Phone Number" Width="*" Binding="{Binding phone_number}"  />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

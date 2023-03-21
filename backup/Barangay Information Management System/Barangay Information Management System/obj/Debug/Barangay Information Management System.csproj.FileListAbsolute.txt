@@ -1,0 +1,60 @@
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.exe.config
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Barangay Information Management System.exe.config
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Barangay Information Management System.exe
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Barangay Information Management System.pdb
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Microsoft.Data.Services.Client.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\MySql.Data.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Oracle.VsDevTools.EntityFramework.15.0.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Microsoft.Data.Edm.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Microsoft.Data.OData.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Google.Protobuf.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\ZstdNet.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\BouncyCastle.Crypto.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\Ubiety.Dns.Core.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\System.Buffers.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\K4os.Compression.LZ4.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\K4os.Hash.xxHash.dll
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\MySql.Data.xml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.csprojAssemblyReference.cache
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\addMemberPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\changePasswordPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\changePasswordPage1.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\enterDataPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\loginPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\manageAccountPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\menuPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\registerAccountPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\reportPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\searchDataPage1.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\viewAccountPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\viewAccountPage1.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\viewDataPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\App.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System_MarkupCompile.cache
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System_MarkupCompile.lref
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\addMemberPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\changePasswordPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\changePasswordPage1.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\enterDataPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\loginPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\manageAccountPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\menuPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\registerAccountPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\reportPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\searchDataPage1.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\viewAccountPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\viewAccountPage1.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\viewDataPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.g.resources
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay_Information_Management_System.Properties.Resources.resources
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.csproj.GenerateResource.cache
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.csproj.CoreCompileInputs.cache
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.csproj.CopyComplete
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.exe
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System.pdb
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\splashScreenPage.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\Barangay Information Management System_Content.g.cs
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\obj\Debug\splashScreenPage.baml
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\img\Splash Screen.gif
+E:\Created Applications\Barangay System\Barangay Information Management System\Barangay Information Management System\bin\Debug\videos\Splash Screen.mp4

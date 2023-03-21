@@ -1,0 +1,200 @@
+﻿<Window x:Class="Barangay_Information_Management_System.searchDataPage1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barangay_Information_Management_System"
+        mc:Ignorable="d"
+        Height="938" Width="1313" MinHeight="425" WindowStartupLocation="Manual" Icon="img\Icon.ico" WindowState="Maximized" MinWidth="900" Title="Search Data" ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="78"></RowDefinition>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!-- Header -->
+                <Grid Grid.Row="0" VerticalAlignment="Center" Height="75" Background="#189DEC" Margin="0,0,0,3">
+                    <Label Content="Search Data" FontSize="21" FontFamily="Tahoma" Margin="10,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="55" Foreground="White" FontWeight="Bold"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0,0,0,-1">
+                    <Grid>
+                        <Grid>
+                            <Label Content="Search Category" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="54,47,0,0" VerticalAlignment="Top" />
+                            <Label Content="Search" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="306,49,0,0" VerticalAlignment="Top" Height="26" />
+                            <ComboBox Cursor="Hand" x:Name="category_combobox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="54,80,0,0" Width="230" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="category_combobox" SelectionChanged="Category_combobox_SelectionChanged">
+                                <ComboBoxItem Content="Purok" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Full Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="First Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Middle Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Last Name" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="4Ps" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Age" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Agricultural Facility" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Animals/Pet" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Background Gardening" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Birth Date" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Blind Drainage" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Breast Feeding" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Communication" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Dependency" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Direct Waste to Water Bodies" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Energy Source" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Family Planning" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Farming Product" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Garbage Disposal" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Highest Educational Attainment" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Homelot Status" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="House Status" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="House Type" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Immunization" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="IP" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Livelihood Status" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Mother Tongue" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="NTP" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Number of Family Members" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Occupation" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Other Source of Income" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Philhealth" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="PWD" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Relation to Head of the Family" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Religion" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Sanitary Toilet" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Sex" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Smooking" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Suffix" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Transportation" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Tribe" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Vulnerable Status" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Water Source" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="WRA" FontStyle="Italic" FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+
+                            <TextBox x:Name="search_textbox" Visibility="Hidden" BorderBrush="DarkGray" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="230" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="search_textbox" Margin="306,80,0,0"/>
+                            <TextBox x:Name="search_textbox_number" PreviewTextInput="number_textbox" Visibility="Hidden" BorderBrush="DarkGray" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="230" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="search_textbox_number" Margin="306,80,0,0"/>
+                            <DatePicker x:Name="search_textbox_date" Cursor="Hand" Visibility="Hidden" BorderBrush="DarkGray" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="230" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="search_textbox_date" Margin="306,80,0,0"/>
+
+                            <Border Visibility="Visible" x:Name="search_border" BorderBrush="DarkGray" BorderThickness="0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" AutomationProperties.Name="search_border" Margin="306,80,0,0">
+                                <ComboBox Cursor="Hand" x:Name="search_combobox" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="search_combobox" >
+                                </ComboBox>
+                            </Border>
+
+                            <Button x:Name="search_btn" VerticalAlignment="Top" Cursor="Hand" HorizontalAlignment="Left" Margin="541,80,0,0" Width="44" Height="30" AutomationProperties.Name="search_btn" Click="Search_btn_Click" >
+                                <DockPanel>
+                                    <Image Source="img/Search Icon.png" Width="20" Height="20"></Image>
+                                </DockPanel>
+                            </Button>
+                        </Grid>
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"    Margin="48,132,48,66">
+                            <DataGrid CanUserResizeColumns="false" HeadersVisibility="Column" Background="#FFD8D0D0" x:Name="search_dataGrid" Padding="0,0,0,10" VerticalGridLinesBrush="#FFD8D0D0" HorizontalGridLinesBrush="#FFD8D0D0" FontSize="15" FontFamily="Tahoma" IsReadOnly="True" CanUserAddRows="False" AutomationProperties.Name="search_dataGrid" CanUserResizeRows="False" Visibility="Visible" AutoGenerateColumns="False" HorizontalAlignment="Left" >
+                                <DataGrid.ColumnHeaderStyle >
+                                    <Style TargetType="DataGridColumnHeader" >
+                                        <Setter Property="Background" Value="#FF458DA8"/>
+                                        <Setter Property="BorderBrush" Value="White"></Setter>
+                                        <Setter Property="BorderThickness" Value="0, 0, 0, 2"/>
+                                        <Setter Property="Margin" Value="0,0,0,10"></Setter>
+                                        <Setter Property="FontFamily" Value="Tahoma"></Setter>
+                                        <Setter Property="Padding" Value="10,10,10,10"></Setter>
+                                        <Setter Property="Foreground" Value="White"></Setter>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="Padding" Value="10,0,0,0"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                                    <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="Background" Value="#FFD8D0D0"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Foreground" Value="Black"></Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="Delete" MinWidth="63">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="family_member_delete_btn" Cursor="Hand" AutomationProperties.Name="family_member_delete_btn" Width="45" HorizontalAlignment="Left"  Click="delete_member_btn_Click">
+                                                    <DockPanel>
+                                                        <Image Source="img/Delete Icon.png" Height="15" Width="15"/>
+                                                    </DockPanel>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="View" MinWidth="60">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button x:Name="family_member_view_btn" Cursor="Hand" AutomationProperties.Name="family_member_view_btn" Width="45" Click="view_member_btn_Click" HorizontalAlignment="Left" >
+                                                    <DockPanel>
+                                                        <Image Source="img/View Icon.png" Height="20" Width="20" />
+                                                    </DockPanel>
+                                                </Button>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="Name" Width="*" Binding="{Binding full_name}" />
+                                    <DataGridTextColumn Header="Barangay" Width="*" Binding="{Binding barangay}"  />
+                                    <DataGridTextColumn Header="Purok" Width="*" Binding="{Binding purok}" />
+                                    <DataGridTextColumn Header="Sex" Visibility="Visible" Width="*" Binding="{Binding sex}" />
+                                    <DataGridTextColumn Header="4Ps" Visibility="Hidden" Width="*" Binding="{Binding fourps}" />
+                                    <DataGridTextColumn Header="Age" Visibility="Hidden" Width="*" Binding="{Binding age}" />
+                                    <DataGridTextColumn Header="Agricultural Facility" Visibility="Hidden" Width="*" Binding="{Binding agricultural_facilities}" />
+                                    <DataGridTextColumn Header="Animals/Pet" Visibility="Hidden" Width="*" Binding="{Binding animals}" />
+                                    <DataGridTextColumn Header="Background Gardening" Visibility="Hidden" Width="*" Binding="{Binding background_gardening}" />
+                                    <DataGridTextColumn Header="Birth Date" Visibility="Hidden" Width="*" Binding="{Binding bdate}" />
+                                    <DataGridTextColumn Header="Blind Drainage" Visibility="Hidden" Width="*" Binding="{Binding blind_drainage}" />
+                                    <DataGridTextColumn Header="Breast Feeding" Visibility="Hidden" Width="*" Binding="{Binding breast_feeding}" />
+                                    <DataGridTextColumn Header="Communication" Visibility="Hidden" Width="*" Binding="{Binding communication}" />
+                                    <DataGridTextColumn Header="Dependency" Visibility="Hidden" Width="*" Binding="{Binding dependency}" />
+                                    <DataGridTextColumn Header="Direct Waste to Water Bodies" Visibility="Hidden" Width="*" Binding="{Binding direct_waste_to_water_bodies}" />
+                                    <DataGridTextColumn Header="Energy Source" Visibility="Hidden" Width="*" Binding="{Binding energy_source}" />
+                                    <DataGridTextColumn Header="Family Planning" Visibility="Hidden" Width="*" Binding="{Binding family_planning}" />
+                                    <DataGridTextColumn Header="Garbage Disposal" Visibility="Hidden" Width="*" Binding="{Binding garbage_disposal}" />
+                                    <DataGridTextColumn Header="Highest Educational Attainment" Visibility="Hidden" Width="*" Binding="{Binding education}" />
+                                    <DataGridTextColumn Header="Homelot Status" Visibility="Hidden" Width="*" Binding="{Binding homelot_status}" />
+                                    <DataGridTextColumn Header="House Status" Visibility="Hidden" Width="*" Binding="{Binding house_status}" />
+                                    <DataGridTextColumn Header="House Type" Visibility="Hidden" Width="*" Binding="{Binding house_type}" />
+                                    <DataGridTextColumn Header="Immunization" Visibility="Hidden" Width="*" Binding="{Binding immunization}" />
+                                    <DataGridTextColumn Header="IP" Visibility="Hidden" Width="*" Binding="{Binding ip}" />
+                                    <DataGridTextColumn Header="Livelihood Status" Visibility="Hidden" Width="*" Binding="{Binding livelihood_status}" />
+                                    <DataGridTextColumn Header="Mother Tongue" Visibility="Hidden" Width="*" Binding="{Binding mother_tongue}" />
+                                    <DataGridTextColumn Header="NTP" Visibility="Hidden" Width="*" Binding="{Binding ntp}" />
+                                    <DataGridTextColumn Header="Number of Family Members" Visibility="Hidden" Width="*" Binding="{Binding family_number}" />
+                                    <DataGridTextColumn Header="Occupation" Visibility="Hidden" Width="*" Binding="{Binding occupation}" />
+                                    <DataGridTextColumn Header="Other Source of Income" Visibility="Hidden" Width="*" Binding="{Binding other_source_of_income}" />
+                                    <DataGridTextColumn Header="Philhealth" Visibility="Hidden" Width="*" Binding="{Binding philhealth}" />
+                                    <DataGridTextColumn Header="Farming Product" Visibility="Hidden" Width="*" Binding="{Binding product_name}" />
+                                    <DataGridTextColumn Header="PWD" Visibility="Hidden" Width="*" Binding="{Binding pwd}" />
+                                    <DataGridTextColumn Header="Relation to Head of the Family" Visibility="Hidden" Width="*" Binding="{Binding relationship}" />
+                                    <DataGridTextColumn Header="Religion" Visibility="Hidden" Width="*" Binding="{Binding religion}" />
+                                    <DataGridTextColumn Header="Sanitary Toilet" Visibility="Hidden" Width="*" Binding="{Binding sanitary_toilet}" />
+                                    <DataGridTextColumn Header="Smooking" Visibility="Hidden" Width="*" Binding="{Binding smooking}" />
+                                    <DataGridTextColumn Header="Suffix" Visibility="Hidden" Width="*" Binding="{Binding suffix}" />
+                                    <DataGridTextColumn Header="Transportation" Visibility="Hidden" Width="*" Binding="{Binding transportation}" />
+                                    <DataGridTextColumn Header="Tribe" Visibility="Hidden" Width="*" Binding="{Binding tribe}" />
+                                    <DataGridTextColumn Header="Vulnerable Status" Visibility="Hidden" Width="*" Binding="{Binding vulnerable_status}" />
+                                    <DataGridTextColumn Header="Water Source" Visibility="Hidden" Width="*" Binding="{Binding water_source}" />
+                                    <DataGridTextColumn Header="WRA" Visibility="Hidden" Width="*" Binding="{Binding wra}" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </ScrollViewer>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

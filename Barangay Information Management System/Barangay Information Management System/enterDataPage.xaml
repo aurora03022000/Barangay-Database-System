@@ -1,0 +1,511 @@
+﻿<Window x:Class="Barangay_Information_Management_System.enterDataPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Barangay_Information_Management_System"
+        mc:Ignorable="d"
+        Title="Enter Data" Height="2248" Width="1726" MinWidth="392"  Icon="img\Icon.ico" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+    <Grid>
+        <!-- Enter Data -->
+        <Grid x:Name="enterDataGrid" AutomationProperties.Name="enterDataGrid" Visibility="Visible">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="64"></RowDefinition>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <Grid Grid.Row="0" Margin="0,-8,0,0" VerticalAlignment="Center" Height="72" Background="#189DEC">
+                    <Label Content="Enter Data" FontSize="21" FontFamily="Tahoma" Margin="10,0,10,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Height="52" Foreground="White" FontWeight="Bold"/>
+                </Grid>
+
+                <!-- Inputs -->
+                <ScrollViewer  Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="10,5,0,0" Padding="8,8,8,0">
+                    <Grid Width="1673" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="210"></RowDefinition>
+                            <RowDefinition Height="363"></RowDefinition>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="434"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="154"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Label Content="Barangay and Purok" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Background="#FF458DA8" Height="39" Width="1653" Foreground="White" Padding="10,5,5,5" VerticalContentAlignment="Center"/>
+                            <Label Content="Barangay" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,92,0,0" VerticalAlignment="Top" />
+                            <Label Content="(Given)" FontStyle="Italic" FontSize="11" HorizontalAlignment="Left" Margin="114,95,0,0" VerticalAlignment="Top" Height="25" Width="44" />
+                            <Label Content="Purok" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="306,92,0,0"></Label>
+                            <Label Content="*" FontSize="20" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="350,85,1303,97" Width="20"></Label>
+                            <TextBox x:Name="barangayTextbox" BorderBrush="DarkGray" IsReadOnly="True" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,125,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="barangayTextbox"/>
+                            <Border x:Name="purok_border" BorderBrush="DarkGray" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="30" Margin="306,125,1133,55" Width="231" AutomationProperties.Name="purok_border">
+                                <ComboBox Cursor="Hand" x:Name="purokTextbox" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="purokTextbox" FontSize="13" Margin="0,0,0,0" />
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Label Content="Head Information" Background="#FF458DA8" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="1653" Padding="10,5,5,5" VerticalContentAlignment="Center" Height="39"/>
+                            <Label Content="First Name" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,66,0,0" VerticalAlignment="Top" />
+                            <Label Content="*" FontSize="20" Foreground="Red" VerticalAlignment="Top" HorizontalAlignment="Left" Height="28" Margin="120,59,0,0" Width="21"></Label>
+                            <Label Content="Middle Name" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="306,66,0,0" VerticalAlignment="Top" />
+                            <Label Content="*" FontSize="20" Foreground="Red" VerticalAlignment="Top" HorizontalAlignment="Left" Height="28" Margin="395,60,0,0" Width="20"></Label>
+                            <Label Content="Last Name" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="566,66,0,0" VerticalAlignment="Top" />
+                            <Label Content="*" FontSize="20" Foreground="Red" VerticalAlignment="Top" HorizontalAlignment="Left" Height="28" Margin="638,59,0,0" Width="21"></Label>
+                            <Label Content="Tribe" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1348,66,0,0" VerticalAlignment="Top" />
+                            <Label Content="Sex" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,134,0,0" VerticalAlignment="Top" />
+                            <Label Content="Birth Date" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="306,134,0,0" VerticalAlignment="Top" />
+                            <Label Content="(Day/Month/Year)" FontSize="10" FontStyle="Italic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="374,136,0,0" Height="24"></Label>
+                            <Label Content="Age" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="566,134,0,0" VerticalAlignment="Top" />
+                            <Label Content="Religion" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="826,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.522,0.607" />
+                            <Label Content="Highest Educational Attainment" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1084,134,0,0" VerticalAlignment="Top" />
+                            <Label Content="Occupation" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1348,134,0,0" VerticalAlignment="Top" />
+                            <Label Content="Relation to Head of the Family" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,202,0,0" VerticalAlignment="Top" />
+                            <Label Content="PWD" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="305,202,0,0" VerticalAlignment="Top" />
+                            <Label Content="IP" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="566,202,0,0" VerticalAlignment="Top" />
+                            <Label Content="Philhealth" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="826,202,0,0" VerticalAlignment="Top" />
+                            <Label Content="Breast Feeding" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1084,202,0,0" VerticalAlignment="Top" />
+                            <Label Content="NTP" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1348,202,0,0" VerticalAlignment="Top" />
+                            <Label Content="Smooking" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,270,0,0" VerticalAlignment="Top" />
+                            <Label Content="4Ps" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="306,270,0,0" VerticalAlignment="Top" />
+                            <TextBox x:Name="head_first_name_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,99,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="head_first_name_Textbox"/>
+                            <TextBox x:Name="head_middle_name_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="306,99,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="head_middle_name_Textbox"/>
+                            <TextBox x:Name="head_last_name_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="566,99,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="head_last_name_Textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="head_suffix_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="826,99,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_suffix_Textbox" >
+                                <ComboBoxItem Content="Jr." FontSize="13"/>
+                                <ComboBoxItem Content="Sr." FontSize="13"/>
+                                <ComboBoxItem Content="I" FontSize="13"/>
+                                <ComboBoxItem Content="II" FontSize="13"/>
+                                <ComboBoxItem Content="III" FontSize="13"/>
+                            </ComboBox>
+                            <Label Content="Suffix" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="826,66,0,0" VerticalAlignment="Top" />
+                            <ComboBox Cursor="Hand" x:Name="head_dependency_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1084,99,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_dependency_Textbox" >
+                                <ComboBoxItem Content="Dependent" FontSize="13"/>
+                                <ComboBoxItem Content="Independent" FontSize="13"/>
+                            </ComboBox>
+                            <Label Content="Dependency" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1084,66,0,0" VerticalAlignment="Top" />
+                            <ComboBox Cursor="Hand" FontSize="13" x:Name="head_tribe_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1348,99,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_tribe_Textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="head_sex_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,167,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_sex_Textbox">
+                                <ComboBoxItem Content="Male" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="Female" FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <DatePicker Cursor="Hand" x:Name="head_bdate_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="305,167,0,0" Width="232" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="head_bdate_Textbox"/>
+                            <TextBox x:Name="head_age_Textbox" PreviewTextInput="head_age" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="566,167,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="head_age_Textbox"/>
+                            <ComboBox Cursor="Hand" FontSize="13" x:Name="head_religion_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="826,167,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_religion_Textbox"/>
+                            <ComboBox Cursor="Hand" FontSize="13" x:Name="head_education_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1084,167,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_education_Textbox"/>
+                            <TextBox x:Name="head_occupation_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1348,167,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="head_occupation_Textbox"/>
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="head_relation_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,235,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_relation_Textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="head_pwd_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="306,235,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_pwd_Textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="head_ip_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="566,235,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_ip_Textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="head_philhealth_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="826,235,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_philhealth_Textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="head_breast_feeding_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1084,235,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_breast_feeding_Textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="head_ntp_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1348,235,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_ntp_Textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="head_smooking_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,303,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_smooking_Textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="head_fourps_Textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="305,303,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="head_fourps_Textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+
+                        </Grid>
+
+                        <Grid Grid.Row="2" Margin="0,31,0,0">
+                            <Label Content="Family Members" Background="#FF458DA8" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="1653" Padding="10,5,5,5" VerticalContentAlignment="Center" Height="39"/>
+                            <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="37,54,10,0" Width="1626">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="27"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0" Panel.ZIndex="1" FontStyle="Italic" Content="(Family Members List)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,13,0,0" Height="26" Width="128" Grid.RowSpan="2"/>
+                                <DataGrid Grid.Row="1" CanUserResizeColumns="false" x:Name="member_dataGrid" BorderBrush="White" Padding="10" Background="White" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" FontSize="15" FontFamily="Tahoma" IsReadOnly="True" CanUserAddRows="False" ItemsSource="{Binding Temporary_Members}" AutoGenerateColumns="False" AutomationProperties.Name="member_dataGrid" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" HorizontalScrollBarVisibility="Hidden" CanUserResizeRows="False" Margin="0" VerticalAlignment="Top" Visibility="Visible">
+                                    <DataGrid.ColumnHeaderStyle >
+                                        <Style TargetType="DataGridColumnHeader" >
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="FontFamily" Value="Tahoma"></Setter>
+                                            <Setter Property="Padding" Value="0,0,0,10"></Setter>
+                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                        </Style>
+                                    </DataGrid.ColumnHeaderStyle>
+
+                                    <DataGrid.CellStyle>
+                                        <Style TargetType="DataGridCell">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter Property="Foreground" Value="Black"></Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </DataGrid.CellStyle>
+
+                                    <DataGrid.Columns>
+                                        <DataGridTemplateColumn Header="Delete" Width="60">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Button x:Name="temporary_family_member_delete_btn" Cursor="Hand" AutomationProperties.Name="temporary_family_member_delete_btn"  Click="temporary_family_member_delete_btn_Click">
+                                                        <DockPanel>
+                                                            <Image Source="img/Delete Icon.png" Height="15" Width="15" />
+                                                        </DockPanel>
+                                                    </Button>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTextColumn Header="Family Member ID" Visibility="Hidden" Width="*" Binding="{Binding temporary_family_member_id}"/>
+                                        <DataGridTextColumn Header="Name" Width="*" Binding="{Binding temporary_full_name}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+
+                                <DataGrid Grid.Row="1" CanUserResizeColumns="false" x:Name="empty_member_dataGrid" BorderBrush="White" Padding="10" Background="White" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" FontSize="15" FontFamily="Tahoma" IsReadOnly="True" CanUserAddRows="False" ItemsSource="{Binding Temporary_Members}" AutoGenerateColumns="False" AutomationProperties.Name="empty_member_dataGrid" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" HorizontalScrollBarVisibility="Hidden" CanUserResizeRows="False" Width="1616" Margin="0" VerticalAlignment="Top" Visibility="Hidden">
+                                    <DataGrid.ColumnHeaderStyle >
+                                        <Style TargetType="DataGridColumnHeader" >
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="FontFamily" Value="Tahoma"></Setter>
+                                            <Setter Property="Padding" Value="0,0,0,10"></Setter>
+                                            <Setter Property="FontWeight" Value="Bold"></Setter>
+                                        </Style>
+                                    </DataGrid.ColumnHeaderStyle>
+
+                                    <DataGrid.CellStyle>
+                                        <Style TargetType="DataGridCell">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter Property="Foreground" Value="Black"></Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </DataGrid.CellStyle>
+
+                                    <DataGrid.Columns>
+                                        <DataGridTemplateColumn Header="Delete" Width="60">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Button x:Name="temporary_family_member_delete_btn" Cursor="Hand" AutomationProperties.Name="temporary_family_member_delete_btn"  Click="temporary_family_member_delete_btn_Click">
+                                                        <DockPanel>
+                                                            <Image Source="img/Delete Icon.png" Height="20" Width="20" />
+                                                        </DockPanel>
+                                                    </Button>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTextColumn Header="Family Member ID" Visibility="Hidden" Width="*" Binding="{Binding temporary_family_member_id}"/>
+                                        <DataGridTextColumn Header="Name" Width="*" Binding="{Binding temporary_full_name}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+
+                                <Grid Grid.Row="2">
+                                    <Label Content="First Name" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="11,1,1527,324" Width="88" Height="28"></Label>
+                                    <Label Content="Middle Name" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="269,12,1259,335" Width="98" RenderTransformOrigin="0.5,0.5" Height="28"/>
+                                    <Label Content="Last Name" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="527,12,1000,335" Width="99" RenderTransformOrigin="0.5,0.5" Height="28"/>
+                                    <Label Content="Dependency" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1052,12,475,335" Width="99" RenderTransformOrigin="0.5,0.5" Height="28"/>
+                                    <Label Content="Tribe" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1313,12,215,335" Width="98" RenderTransformOrigin="0.5,0.5" Height="28"/>
+                                    <Label Content="Sex" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="11,80,1516,267" Width="99" RenderTransformOrigin="0.5,0.5" Height="28"/>
+                                    <Label Content="Birth Date" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="269,80,1270,267" Width="87" Height="28"/>
+                                    <Label Content="(Day/Month/Year)" FontSize="10" FontStyle="Italic" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="340,82,1197,270"></Label>
+                                    <Label Content="Age" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="528,80,1011,267" Width="87" Height="28"/>
+                                    <Label Content="Religion" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="791,80,748,267" Width="87" Height="28"/>
+                                    <Label Content="Highest Educational Attainment" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1051,80,343,267" Width="232" Height="28"/>
+                                    <Label Content="Occupation" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1313,80,82,267" Width="231" Height="28"/>
+                                    <Label Content="Relation to Head of the Family" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="11,148,0,0" Width="231" Height="28"/>
+                                    <Label Content="PWD" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="270,148,1269,199" Width="87" Height="28"/>
+                                    <Label Content="IP" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="528,148,1011,199" Width="87" Height="28"/>
+                                    <Label Content="Philhealth" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="790,148,750,199" Width="86" Height="28"/>
+                                    <Label Content="Breast Feeding" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1052,148,460,199" Width="114" Height="28"/>
+                                    <Label Content="NTP" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1313,148,200,199" Width="113" Height="28"/>
+                                    <Label Content="Smooking" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="11,216,1503,131" Width="112" Height="28"/>
+                                    <Label Content="4Ps" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="270,216,0,0" Width="87" Height="28"/>
+                                    <TextBox x:Name="temporary_member_first_name_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="11,45,0,0" AutomationProperties.Name="temporary_member_first_name_textbox"></TextBox>
+                                    <TextBox x:Name="temporary_member_middle_name_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="269,45,0,0" AutomationProperties.Name="temporary_member_middle_name_textbox"/>
+                                    <TextBox x:Name="temporary_member_last_name_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="527,45,0,0" AutomationProperties.Name="temporary_member_last_name_textbox"/>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_suffix_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="232" FontFamily="Tahoma" Padding="8,8,8,0" Margin="791,45,0,0" AutomationProperties.Name="temporary_member_suffix_textbox">
+                                        <ComboBoxItem Content="Jr." FontSize="13"/>
+                                        <ComboBoxItem Content="Sr." FontSize="13"/>
+                                        <ComboBoxItem Content="I" FontSize="13"/>
+                                        <ComboBoxItem Content="II" FontSize="13"/>
+                                        <ComboBoxItem Content="III" FontSize="13"/>
+                                    </ComboBox>
+                                    <Label Content="Suffix" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="791,12,736,335" Width="99" RenderTransformOrigin="0.5,0.5" Height="28"/>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_dependency_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="232" FontFamily="Tahoma" Padding="8,8,8,0" Margin="1052,45,0,0" AutomationProperties.Name="temporary_member_dependency_textbox">
+                                        <ComboBoxItem Content="Dependent" FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="Independent" FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_tribe_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="1313,45,0,0" AutomationProperties.Name="temporary_member_tribe_textbox" FontSize="13"/>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_sex_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="232" FontFamily="Tahoma" Padding="8,8,8,0" Margin="11,113,0,0" AutomationProperties.Name="temporary_member_sex_textbox">
+                                        <ComboBoxItem Content="Male" FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="Female" FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <DatePicker Cursor="Hand" x:Name="temporary_member_bdate_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="269,113,0,0" AutomationProperties.Name="temporary_member_bdate_textbox"/>
+                                    <TextBox x:Name="temporary_member_age_textbox" PreviewTextInput="member_age" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="528,113,0,0" AutomationProperties.Name="temporary_member_age_textbox"/>
+                                    <ComboBox FontSize="13" Cursor="Hand" x:Name="temporary_member_religion_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="791,113,0,0" AutomationProperties.Name="temporary_member_religion_textbox"/>
+                                    <ComboBox FontSize="13" Cursor="Hand" x:Name="temporary_member_education_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="1052,113,0,0" AutomationProperties.Name="temporary_member_education_textbox"/>
+                                    <TextBox x:Name="temporary_member_occupation_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="1313,113,0,0" AutomationProperties.Name="temporary_member_occupation_textbox"/>
+                                    <ComboBox FontSize="13" Cursor="Hand" x:Name="temporary_member_relationship_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="11,181,0,0" AutomationProperties.Name="temporary_member_relationship_textbox"/>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_pwd_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="269,181,0,0" AutomationProperties.Name="temporary_member_pwd_textbox">
+                                        <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_ip_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="528,181,0,0" AutomationProperties.Name="temporary_member_ip_textbox">
+                                        <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_philhealth_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="790,181,0,0" AutomationProperties.Name="temporary_member_philhealth_textbox">
+                                        <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_breast_feeding_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="1052,181,0,0" AutomationProperties.Name="temporary_member_breast_feeding_textbox">
+                                        <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_ntp_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="1313,181,0,0" AutomationProperties.Name="temporary_member_ntp_textbox">
+                                        <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_smooking_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="10,249,0,0" AutomationProperties.Name="temporary_member_smooking_textbox">
+                                        <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+                                    <ComboBox Cursor="Hand" x:Name="temporary_member_fourps_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" Margin="270,248,0,0" AutomationProperties.Name="temporary_member_fourps_textbox">
+                                        <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                        <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                                    </ComboBox>
+
+                                    <Button x:Name="addMember_btn" Cursor="Hand" AutomationProperties.Name="addMember_btn" HorizontalAlignment="Left" Margin="11,0,0,24" Width="137" Click="AddMember_btn_Click" Height="34" VerticalAlignment="Bottom">
+                                        <DockPanel>
+                                            <Image Source="img/Add Member Icon.png" Height="24" Width="27" Margin="0,0,5,0" />
+                                            <TextBlock Text="Add Member" VerticalAlignment="Center"></TextBlock>
+                                        </DockPanel>
+                                    </Button>
+
+                                </Grid>
+
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Row="3">
+                            <Label Content="Background Information" Background="#FF458DA8" Foreground="White" HorizontalAlignment="Center" Margin="10,51,10,0" FontSize="16" FontWeight="Bold" Width="1653" Padding="10,5,5,5" VerticalContentAlignment="Center" Height="38" VerticalAlignment="Top"/>
+                            <Label Content="Mother Tongue" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,106,0,0" VerticalAlignment="Top" Height="30" />
+                            <Label Content="House Type" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="308,104,0,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.5,0.5" />
+                            <Label Content="Sanitary Toilet" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="567,106,0,0" VerticalAlignment="Top" Height="30" />
+                            <Label Content="Immunization" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="832,104,0,0" VerticalAlignment="Top" Height="32" />
+                            <Label Content="WRA" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1090,105,0,0" VerticalAlignment="Top" Height="31" Width="68" />
+                            <Label Content="Garbage Disposal" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1354,105,0,0" VerticalAlignment="Top" Height="31" />
+                            <Label Content="Water Source" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,176,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Family Planning" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="308,176,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Background Gardening" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="567,176,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Livelihood Status" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="829,176,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Animals/Pet" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1090,176,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Blind Drainage" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1354,176,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Communication" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="47,244,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Homelot Status" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="308,244,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Energy Source" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="567,244,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Direct Waste to Water Bodies" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="832,244,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Vulnerable Status" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1090,244,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Agricultural Facility" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="1354,244,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Other Source of Income" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="49,312,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="House Status" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="308,312,0,0" VerticalAlignment="Top" Height="28" />
+                            <Label Content="Transportation" FontFamily="Tahoma" FontSize="15" HorizontalAlignment="Left" Margin="567,312,0,0" VerticalAlignment="Top" Height="33" />
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="household_mother_tongue_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,141,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_mother_tongue_textbox"/>
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="household_house_type_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="308,141,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_house_type_textbox"/>
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="household_sanitary_toilet_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="567,141,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_sanitary_toilet_textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="household_immunization_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="829,141,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_immunization_textbox">
+                                <ComboBoxItem Content="Yes" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A" FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="household_wra_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1090,141,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_wra_textbox">
+                                <ComboBoxItem Content="Yes" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No" FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A" FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="household_garbage_disposal_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1354,141,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_garbage_disposal_textbox"/>
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="household_water_source_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,209,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_water_source_textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="household_family_planning_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="308,209,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_family_planning_textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="household_background_gardening_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="566,209,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_background_gardening_textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <TextBox x:Name="household_livelihood_status_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="829,209,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="household_livelihood_status_textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="household_animals_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1090,209,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_animals_textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <ComboBox Cursor="Hand" x:Name="household_blind_drainage_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1354,209,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_blind_drainage_textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <TextBox x:Name="household_communication_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="47,277,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="household_communication_textbox"/>
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="household_homelot_status_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="308,277,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_home_status_textbox"/>
+                            <TextBox x:Name="household_energy_source_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="567,277,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="household_energy_source_textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="household_dwtwb_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="829,277,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_dwtwb_textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <TextBox x:Name="household_vulnerable_status_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1090,277,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="household_vulnerable_status_textbox"/>
+                            <ComboBox Cursor="Hand" x:Name="household_agricultural_facility_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="1354,277,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_agricultural_facility_textbox">
+                                <ComboBoxItem Content="Yes"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="No"  FontSize="13"></ComboBoxItem>
+                                <ComboBoxItem Content="N/A"  FontSize="13"></ComboBoxItem>
+                            </ComboBox>
+                            <TextBox x:Name="household_other_source_of_income_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="49,345,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="household_other_source_of_income_textbox"/>
+                            <ComboBox FontSize="13" Cursor="Hand" x:Name="household_house_status_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="308,345,0,0" Width="231" FontFamily="Tahoma" Padding="8,8,8,0" AutomationProperties.Name="household_house_status_textbox"/>
+                            <TextBox x:Name="household_transportation_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Margin="567,345,0,0" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" AutomationProperties.Name="household_transportation_textbox"/>
+                        </Grid>
+
+                        <Grid Grid.Row="4">
+                            <Label Content="Farming Products" Background="#FF458DA8" Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="1653" Padding="10,5,5,5" VerticalContentAlignment="Center" Height="38"/>
+                            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="1626" Margin="37,43,10,46">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="27"/>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0" Panel.ZIndex="1" FontStyle="Italic" Content="(Products List)" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,13,0,0" Height="26" Width="128" Grid.RowSpan="2"/>
+                                <Grid Grid.Row="1">
+                                    <DataGrid x:Name="product_dataGrid" BorderBrush="White" Padding="10" Background="White" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" FontSize="15" FontFamily="Tahoma" IsReadOnly="True" CanUserAddRows="False" ItemsSource="{Binding Temporary_product}" AutoGenerateColumns="False" AutomationProperties.Name="product_dataGrid" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" HorizontalScrollBarVisibility="Hidden" CanUserResizeRows="False" Width="1562" VerticalAlignment="Top" Visibility="Visible">
+
+                                        <DataGrid.ColumnHeaderStyle >
+                                            <Style TargetType="DataGridColumnHeader" >
+                                                <Setter Property="Background" Value="White"/>
+                                                <Setter Property="FontFamily" Value="Tahoma"></Setter>
+                                                <Setter Property="Padding" Value="0,0,0,10"></Setter>
+                                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                                            </Style>
+                                        </DataGrid.ColumnHeaderStyle>
+
+                                        <DataGrid.CellStyle>
+                                            <Style TargetType="DataGridCell">
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsSelected" Value="True">
+                                                        <Setter Property="Foreground" Value="Black"></Setter>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </DataGrid.CellStyle>
+
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn Header="Delete" Width="60">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button x:Name="temporary_product_delete_btn" Cursor="Hand" AutomationProperties.Name="temporary_product_delete_btn"  Click="temporary_product_delete_btn_Click">
+                                                            <DockPanel>
+                                                                <Image Source="img/Delete Icon.png" Height="20" Width="20" />
+                                                            </DockPanel>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTextColumn Header="Product ID" Visibility="Hidden" Width="*" Binding="{Binding temporary_product_id}"/>
+                                            <DataGridTextColumn Header="Product Name" Binding="{Binding temporary_product_name}"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+
+                                    <DataGrid x:Name="empty_product_dataGrid" BorderBrush="White" Padding="10" Background="White" HorizontalGridLinesBrush="White" VerticalGridLinesBrush="White" FontSize="15" FontFamily="Tahoma" IsReadOnly="True" CanUserAddRows="False" ItemsSource="{Binding Temporary_product}" AutoGenerateColumns="False" AutomationProperties.Name="empty_product_dataGrid" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Left" HorizontalScrollBarVisibility="Hidden" CanUserResizeRows="False" Width="1616" VerticalAlignment="Top" Visibility="Hidden">
+
+                                        <DataGrid.ColumnHeaderStyle >
+                                            <Style TargetType="DataGridColumnHeader" >
+                                                <Setter Property="Background" Value="White"/>
+                                                <Setter Property="FontFamily" Value="Tahoma"></Setter>
+                                                <Setter Property="Padding" Value="0,0,0,10"></Setter>
+                                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                                            </Style>
+                                        </DataGrid.ColumnHeaderStyle>
+
+                                        <DataGrid.CellStyle>
+                                            <Style TargetType="DataGridCell">
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsSelected" Value="True">
+                                                        <Setter Property="Foreground" Value="Black"></Setter>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </DataGrid.CellStyle>
+
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn Header="Delete" Width="60">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button x:Name="temporary_product_delete_btn" Cursor="Hand" AutomationProperties.Name="temporary_product_delete_btn"  Click="temporary_product_delete_btn_Click">
+                                                            <DockPanel>
+                                                                <Image Source="img/Delete Icon.png" Height="15" Width="15" />
+                                                            </DockPanel>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTextColumn Header="Product ID" Visibility="Hidden" Width="*" Binding="{Binding temporary_product_id}"/>
+                                            <DataGridTextColumn Header="Product Name" Binding="{Binding temporary_product_name}"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+
+                                <Grid Grid.Row="2">
+                                    <Label Content="Product Name" FontFamily="Tahoma" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,6,1507,110" Width="109" Height="28"></Label>
+                                    <TextBox x:Name="product_name_textbox" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="231" FontFamily="Tahoma" Padding="5,6,5,0" Margin="10,39,0,0" AutomationProperties.Name="product_name_textbox"></TextBox>
+                                    <Button x:Name="addProduct_btn" Cursor="Hand" AutomationProperties.Name="addProduct_btn" HorizontalAlignment="Left" Margin="10,0,0,10" Width="141" Height="34" VerticalAlignment="Bottom" Click="AddProduct_btn_Click">
+                                        <DockPanel>
+                                            <Image Source="img/Add Product Icon.png" Height="24" Width="24" Margin="0,0,5,0" />
+                                            <TextBlock Text="Add Product" VerticalAlignment="Center"></TextBlock>
+                                        </DockPanel>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+
+                        <Grid Grid.Row="5">
+                            <Separator VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" Margin="10,0,10,71" RenderTransformOrigin="0.5,0.5" Width="1653"></Separator>
+
+                            <Button x:Name="submit_data_btn" HorizontalAlignment="Center" Cursor="Hand" Click="submit_data_btn_Click" AutomationProperties.Name="submit_data_btn" Background="#FF458DA8" Foreground="White" VerticalAlignment="Center" Margin="46,28,1485,26" Height="40" Width="142">
+                                <DockPanel>
+                                    <Image Source="img/Submit Icon.png" Height="27" Width="29" Margin="0,0,5,0" />
+                                    <TextBlock Text="Submit Data" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                </DockPanel>
+                            </Button>
+                        </Grid>
+
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+        <!-- ** -->
+    </Grid>
+</Window>

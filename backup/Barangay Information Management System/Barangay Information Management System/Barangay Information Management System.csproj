@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EECBA0C-2417-4B36-8461-CF67EF2EC309}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Barangay_Information_Management_System</RootNamespace>
+    <AssemblyName>Barangay Information Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.IntegrationServices.ODataConnectionManager, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccessIOP">
+      <HintPath>Oracle Developer Tools for VS2017\odp.net\managed\x64\Oracle.ManagedDataAccessIOP.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.VsDevTools.EntityFramework.15.0, Version=6.122.19.31, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="changePasswordPage.xaml.cs">
+      <DependentUpon>changePasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="changePasswordPage1.xaml.cs">
+      <DependentUpon>changePasswordPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="manageAccountPage.xaml.cs">
+      <DependentUpon>manageAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxManager.cs" />
+    <Compile Include="registerAccountPage.xaml.cs">
+      <DependentUpon>registerAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="reportPage.xaml.cs">
+      <DependentUpon>reportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="searchDataPage1.xaml.cs">
+      <DependentUpon>searchDataPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="splashScreenPage.xaml.cs">
+      <DependentUpon>splashScreenPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="viewAccountPage.xaml.cs">
+      <DependentUpon>viewAccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="viewAccountPage1.xaml.cs">
+      <DependentUpon>viewAccountPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="viewDataPage.xaml.cs">
+      <DependentUpon>viewDataPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="addMemberPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changePasswordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changePasswordPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="enterDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="loginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="addMemberPage.xaml.cs">
+      <DependentUpon>addMemberPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="enterDataPage.xaml.cs">
+      <DependentUpon>enterDataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="loginPage.xaml.cs">
+      <DependentUpon>loginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="manageAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="menuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="registerAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="reportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="searchDataPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="splashScreenPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="viewAccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="viewAccountPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="viewDataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Member.cs" />
+    <Compile Include="menuPage.xaml.cs">
+      <DependentUpon>menuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Enter Data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Search Data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Content Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Back Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Delete Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Add Member Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Add Product Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Submit Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\View Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\View Icon 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\View Icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Search Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Update Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Delete Blue Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Not Allowed Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Cancel Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Edit Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\New Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\New Member Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\View Report Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Change Password Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Reset Password Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Change Password Icon 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Manage Accounts Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Register Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Register Icon 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Change Password Icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Details Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\Splash Screen.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="videos\Splash Screen.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
